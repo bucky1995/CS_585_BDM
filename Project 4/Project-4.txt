@@ -1,0 +1,458 @@
+Problem 1:
+
+use p4
+
+db.createCollection("test")
+
+db.test.insertMany([
+{
+    "_id" : 1,
+    "name" : {
+        "first" : "John",
+        "last" : "Backus"
+    },
+    "birth" : ISODate("1924-12-03T05:00:00Z"),
+    "death" : ISODate("2007-03-17T04:00:00Z"),
+    "contribs" : [
+        "Fortran",
+        "ALGOL",
+        "Backus-Naur Form",
+        "FP"
+    ],
+    "awards" : [
+        {
+            "award" : "W.W. McDowell Award",
+            "year" : 1967,
+            "by" : "IEEE Computer Society"
+        },
+        {
+            "award" : "National Medal of Science",
+            "year" : 1975,
+            "by" : "National Science Foundation"
+        },
+        {
+            "award" : "Turing Award",
+            "year" : 1977,
+            "by" : "ACM"
+        },
+        {
+            "award" : "Draper Prize",
+            "year" : 1993,
+            "by" : "National Academy of Engineering"
+        }
+    ]
+}
+,
+{
+    "_id" : ObjectId("51df07b094c6acd67e492f41"),
+    "name" : {
+        "first" : "John",
+        "last" : "McCarthy"
+    },
+    "birth" : ISODate("1927-09-04T04:00:00Z"),
+    "death" : ISODate("2011-12-24T05:00:00Z"),
+    "contribs" : [
+        "Lisp",
+        "Artificial Intelligence",
+        "ALGOL"
+    ],
+    "awards" : [
+        {
+            "award" : "Turing Award",
+            "year" : 1971,
+            "by" : "ACM"
+        },
+        {
+            "award" : "Kyoto Prize",
+            "year" : 1988,
+            "by" : "Inamori Foundation"
+        },
+        {
+            "award" : "National Medal of Science",
+            "year" : 1990,
+            "by" : "National Science Foundation"
+        }
+    ]
+}
+,
+{
+    "_id" : 3,
+    "name" : {
+        "first" : "Grace",
+        "last" : "Hopper"
+    },
+    "title" : "Rear Admiral",
+    "birth" : ISODate("1906-12-09T05:00:00Z"),
+    "death" : ISODate("1992-01-01T05:00:00Z"),
+    "contribs" : [
+        "UNIVAC",
+        "compiler",
+        "FLOW-MATIC",
+        "COBOL"
+    ],
+    "awards" : [
+        {
+            "award" : "Computer Sciences Man of the Year",
+            "year" : 1969,
+            "by" : "Data Processing Management Association"
+        },
+        {
+            "award" : "Distinguished Fellow",
+            "year" : 1973,
+            "by" : " British Computer Society"
+        },
+        {
+            "award" : "W. W. McDowell Award",
+            "year" : 1976,
+            "by" : "IEEE Computer Society"
+        },
+        {
+            "award" : "National Medal of Technology",
+            "year" : 1991,
+            "by" : "United States"
+        }
+    ]
+}
+,
+{
+    "_id" : 4,
+    "name" : {
+        "first" : "Kristen",
+        "last" : "Nygaard"
+    },
+    "birth" : ISODate("1926-08-27T04:00:00Z"),
+    "death" : ISODate("2002-08-10T04:00:00Z"),
+    "contribs" : [
+        "OOP",
+        "Simula"
+    ],
+    "awards" : [
+        {
+            "award" : "Rosing Prize",
+            "year" : 1999,
+            "by" : "Norwegian Data Association"
+        },
+        {
+            "award" : "Turing Award",
+            "year" : 2001,
+            "by" : "ACM"
+        },
+        {
+            "award" : "IEEE John von Neumann Medal",
+            "year" : 2001,
+            "by" : "IEEE"
+        }
+    ]
+}
+,
+{
+    "_id" : 5,
+    "name" : {
+        "first" : "Ole-Johan",
+        "last" : "Dahl"
+    },
+    "birth" : ISODate("1931-10-12T04:00:00Z"),
+    "death" : ISODate("2002-06-29T04:00:00Z"),
+    "contribs" : [
+        "OOP",
+        "Simula"
+    ],
+    "awards" : [
+        {
+            "award" : "Rosing Prize",
+            "year" : 1999,
+            "by" : "Norwegian Data Association"
+        },
+        {
+            "award" : "Turing Award",
+            "year" : 2001,
+            "by" : "ACM"
+        },
+        {
+            "award" : "IEEE John von Neumann Medal",
+            "year" : 2001,
+            "by" : "IEEE"
+        }
+    ]
+}
+,
+{
+    "_id" : 6,
+    "name" : {
+        "first" : "Guido",
+        "last" : "van Rossum"
+    },
+    "birth" : ISODate("1956-01-31T05:00:00Z"),
+    "contribs" : [
+        "Python"
+    ],
+    "awards" : [
+        {
+            "award" : "Award for the Advancement of Free Software",
+            "year" : 2001,
+            "by" : "Free Software Foundation"
+        },
+        {
+            "award" : "NLUUG Award",
+            "year" : 2003,
+            "by" : "NLUUG"
+        }
+    ]
+}
+,
+{
+    "_id" : ObjectId("51e062189c6ae665454e301d"),
+    "name" : {
+        "first" : "Dennis",
+        "last" : "Ritchie"
+    },
+    "birth" : ISODate("1941-09-09T04:00:00Z"),
+    "death" : ISODate("2011-10-12T04:00:00Z"),
+    "contribs" : [
+        "UNIX",
+        "C"
+    ],
+    "awards" : [
+        {
+            "award" : "Turing Award",
+            "year" : 1983,
+            "by" : "ACM"
+        },
+        {
+            "award" : "National Medal of Technology",
+            "year" : 1998,
+            "by" : "United States"
+        },
+        {
+            "award" : "Japan Prize",
+            "year" : 2011,
+            "by" : "The Japan Prize Foundation"
+        }
+    ]
+}
+,
+{
+    "_id" : 8,
+    "name" : {
+        "first" : "Yukihiro",
+        "aka" : "Matz",
+        "last" : "Matsumoto"
+    },
+    "birth" : ISODate("1965-04-14T04:00:00Z"),
+    "contribs" : [
+        "Ruby"
+    ],
+    "awards" : [
+        {
+            "award" : "Award for the Advancement of Free Software",
+            "year" : "2011",
+            "by" : "Free Software Foundation"
+        }
+    ]
+}
+,
+{
+    "_id" : 9,
+    "name" : {
+        "first" : "James",
+        "last" : "Gosling"
+    },
+    "birth" : ISODate("1955-05-19T04:00:00Z"),
+    "contribs" : [
+        "Java"
+    ],
+    "awards" : [
+        {
+            "award" : "The Economist Innovation Award",
+            "year" : 2002,
+            "by" : "The Economist"
+        },
+        {
+            "award" : "Officer of the Order of Canada",
+            "year" : 2007,
+            "by" : "Canada"
+        }
+    ]
+}
+,
+{
+    "_id" : 10,
+    "name" : {
+        "first" : "Martin",
+        "last" : "Odersky"
+    },
+    "contribs" : [
+        "Scala"
+    ]
+}
+])
+
+1)
+db.test.insert(
+{     "_id" : 20,     "name" : {         "first" : "Alex",         "last" : "Chen"     },     "birth" : ISODate("1933-08-27T04:00:00Z"),     "death" : ISODate("1984-11-07T04:00:00Z"),     "contribs" : [         "C++",         "Simula"     ],     "awards" : [         {             "award" : "WPI Award",             "year" : 1977,             "by" : "WPI"         }     ] }
+)
+
+db.test.insert(
+{    "_id" : 30,     "name" : {         "first" : "David",         "last" : "Mark"     },     "birth" : ISODate("1911-04-12T04:00:00Z"),     "death" : ISODate("2000-11-07T04:00:00Z"),     "contribs" : [         "C++",         "FP",         "Lisp",     ],     "awards" : [         {             "award" : "WPI Award",             "year" : 1963,             "by" : "WPI"         },         {              "award" : "Turing Award",             "year" : 1966,             "by" : "ACM"         }     ] }
+)
+
+2)
+db.test.find({"awards.award":"Turing Award","awards.year":{$gte:1976}}).pretty()
+
+3)
+db.test.find( { $or:[ {"awards.2":{$exists:0}} ,{"contribs":"FP" }] } ).pretty()
+
+4)
+db.test.find({"name.first":"Dennis","name.last":"Ritchie"},{_id:0,name:1,contribs:1}).pretty()
+
+5)
+db.test.update( {"name.first":"Guido","name.last":"van Rossum"}, {$addToSet:{contribs:"OOP"}} )
+
+6)
+db.test.updateOne( {"name.first":"Alex","name.last":"Chen"}, { $set:{"comments":["He taught in 3 universities","died from cancer","lived in CA"] } })
+
+7)
+db.createCollection("p17")
+var temp = db.test.find({"name.first":"Alex"}).map(function(u){return u.contribs;})
+var contribs = temp[0]
+for(i=0;i<contribs.length;i++) 
+{
+var te =  db.test.find({"contribs":contribs[i]}).map(function(u){return u.name;});
+db.p17.insert({ Contribution:contribs[i], People:{$set:te});
+}
+db.p17.find().pretty()
+
+8)
+db.test.distinct("awards.by")
+
+9)
+db.test.update({},{$unset:{"death":1}},{multi:true})
+
+10)
+db.test.update({"awards.year":2011},{$pull:{"awards":{"year":2011}}},{multi:true})
+
+11)
+db.test.update({"_id":30,"awards.by":"WPI"},{$set:{"awards.$.year":1965}},{multi:false})
+
+12)
+var contribs =  db.test.find({"_id":3}).map(function(u){return u.contribs;})[0]
+for(i=0;i<contribs.length;i++){ db.test.update({ "_id":30} , { $addToSet:{"contribs":contribs[i]} } ); } 
+
+13)
+db.test.aggregate(
+    { "$match": { 
+        "awards.year": 2001, 
+        "awards.1": { "$exists": true } 
+    }},
+    { "$redact": {
+        "$cond": [
+            { "$gte": [
+                { "$size": { 
+                    "$filter": { 
+                        "input": "$awards", 
+                        "as": "aw", 
+                        "cond": { "$eq": [ "$$aw.year", 2001 ] }
+                    }
+                }}, 
+                2
+            ]}, 
+            "$$KEEP", 
+            "$$PRUNE"
+        ]
+    }},
+{$project:{Name:"$name",_id:0}}
+)
+
+14)
+db.test.find().sort({"_id":-1}).limit(1).pretty()
+or
+db.test.aggregate( {"$sort":{"_id":-1}},{$limit:1})
+or
+var max = db.test.aggregate([{"$sort":{"_id":-1}},{$limit:1}]).map(function(u){return u._id})[0]
+db.test.find({"_id":max}).pretty()
+
+15)
+db.test.find({"awards.by":"ACM"}).limit(1)
+
+Problem 2
+1)
+var mapper = function(){ for (var index = 0;index<this.awards.length;++index){ var award = this.awards[index].award; emit(award,1); } }
+var reducer = function(keyawards,count){ return Array.sum(count);};
+db.test.mapReduce( mapper, reducer, {query:{awards:{$exists:1}},out:"count"} )
+db.count.find().pretty()
+
+
+2)
+db.test.aggregate([{ "$group":{"_id":{$year:"$birth"},"ids":{$push:"$_id"}}},{"$project":{"year":"$_id","_ids":"$ids","_id":0}}])
+
+
+3)
+var max = db.test.aggregate([{"$sort":{"_id":-1}},{$limit:1}]).map(function(u){return u._id})[0]
+var min = db.test.aggregate([{"$sort":{"_id":1}},{$limit:1}]).map(function(u){return u._id})[0]
+db.test.find({"_id":max}).pretty()
+db.test.find({"_id":min}).pretty()
+
+Problem 3
+1.
+var results=[];
+var lv = 1;
+var current = db.categories.findOne({_id: "MongoDB"});
+while(current.parent){
+        parent = db.categories.findOne({_id: current.parent});
+	results.push({Name:parent._id, Level: lv});
+	current = parent
+	lv = lv +1;
+}
+
+printjson(results);
+2. 
+
+
+function find_height (node){
+	var height = 0;
+	var max_height = 0;
+ 	var children = db.categories.find({parent: node});
+	if (children.hasNext() == true){
+			while(children.hasNext() == true){
+				var child = children.next();
+                                print(child._id)
+                                var c_height = find_height(child._id);
+				if (c_height > max_height){
+					max_height = c_height ;
+				}
+			}
+			height = max_height + 1
+	}else{
+		height = 1
+	}
+
+	return height
+}
+
+print(find_height("Books") )
+
+3. 
+
+var parent = db.categories.find({children: "dbm"}) 
+
+print(parent)
+
+4. 
+var stack = [];
+var descendants= [];
+
+var children = parent.childrenl;
+stack.push("Books");
+
+while(stack.length >0){
+	var c = stack.pop();
+        var parent = db.categories.findOne({_id: c});
+	var children = parent.children;
+        var arrayLength = children.length
+        for (var i = 0; i < arrayLength; i++){
+             var child = children[i]
+             descendants.push(child)
+             stack.push(child)
+        }
+}
+print(descendants)
